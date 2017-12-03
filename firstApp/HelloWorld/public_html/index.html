@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>First Backbone JS Application</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script src="js/libs/underscore/underscore.js"></script>
+        <script src="js/libs/jquery/jquery.js"></script>
+        <script src="js/libs/backbone/backbone.js"></script>
+        <script>
+            
+            var Tweet = Backbone.Model.extend({
+                defaults: function(){
+                    return{
+                            author:'',
+                            status:''
+                    }
+                }
+            });
+            var tweet = new Tweet({author:'Praveen M Patil',status:'I am writing very first Backbone JS application'});
+            console.log(tweet.get('status'));
+        </script>
+    </head>
+    <body>
+        <div>TODO write content</div>
+    </body>
+</html>
